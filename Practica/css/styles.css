@@ -1,0 +1,643 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+#cssmenu ul,#cssmenu,
+
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button, #removable {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input {
+  font-family: 'FontAwesome';
+  height: 6%;
+  margin-top: 13%;
+  width: 24em;
+  font-size: 0.9em;
+}
+#nothing {
+  background: #ACACAC;
+  height: 2em;
+  font-size: 3em;
+  font-family: monospace;
+  text-align: center;
+  padding: 7%;
+  border: 1px solid black;
+}
+#play_song i {
+  color: green;
+  font-size: 2.5em;
+  padding: 1%;
+}
+#play_song button {
+  background-color: transparent;
+  border: none;
+  float: right;
+  margin-right: 21%;
+  margin-left: -21%;
+}
+#search input[type="text"] {
+  position: relative;
+}
+#search_button {
+  background-color: transparent;
+  border:none;
+  color: white;
+  font-size: 1.5em;
+}
+#search {
+  background-color: rgba(0,0,0,0.6);
+}
+#removable {
+  top:23px;
+}
+#cssmenu ul {
+  float: right;
+}
+#logo {
+  width:5%;
+  float:left;
+  margin-left: 4%;
+}
+#top_tracks button {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+/*Perquè al reproduir la cançó es quedi el reproductor fix a baix de tot*/
+#play_song {
+  background: #2B2828;
+  position: fixed;
+  height: 4em;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin-bottom: 0px;
+  border-radius: 2%;
+  text-align: center;
+  display: table-cell; 
+  vertical-align: middle;
+}
+
+audio {
+  margin-top: 1%;
+  width: 50%;
+}
+
+#info_song_play {
+  color: white;
+  font-family: monospace;
+  margin-top: 0.5%;
+  margin-bottom: -0.5%;
+}
+
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu #menu-button {
+  display: none;
+}
+#cssmenu {
+  font-family: Montserrat, sans-serif;
+  background: #ACACAC;
+}
+#cssmenu > ul > li {
+  float: left;
+}
+#cssmenu.align-center > ul {
+  font-size: 0;
+  text-align: center;
+}
+#cssmenu.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+#cssmenu.align-center ul ul {
+  text-align: left;
+}
+#cssmenu.align-right > ul > li {
+  float: right;
+}
+#cssmenu > ul > li > a {
+  padding: 17px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #333333;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#cssmenu > ul > li:hover > a {
+  color: #ffffff;
+}
+#cssmenu > ul > li.has-sub > a {
+  padding-right: 30px;
+}
+#cssmenu > ul > li.has-sub > a:after {
+  position: absolute;
+  top: 22px;
+  right: 11px;
+  width: 8px;
+  height: 2px;
+  display: block;
+  background: #dddddd;
+  content: '';
+}
+#cssmenu > ul > li.has-sub > a:before {
+  position: absolute;
+  top: 19px;
+  right: 14px;
+  display: block;
+  width: 2px;
+  height: 8px;
+  background: #dddddd;
+  content: '';
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+#cssmenu > ul > li.has-sub:hover > a:before {
+  top: 23px;
+  height: 0;
+}
+#cssmenu ul ul {
+  position: absolute;
+  left: -9999px;
+}
+#cssmenu.align-right ul ul {
+  text-align: right;
+}
+#cssmenu ul ul li {
+  height: 0;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+#cssmenu li:hover > ul {
+  left: auto;
+}
+#cssmenu.align-right li:hover > ul {
+  left: auto;
+  right: 0;
+}
+#cssmenu li:hover > ul > li {
+  height: 35px;
+}
+#cssmenu ul ul ul {
+  margin-left: 100%;
+  top: 0;
+}
+#cssmenu.align-right ul ul ul {
+  margin-left: 0;
+  margin-right: 100%;
+}
+#cssmenu ul ul li a {
+  border-bottom: 1px solid rgba(150, 150, 150, 0.15);
+  padding: 11px 15px;
+  width: 170px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #dddddd;
+  font-weight: 400;
+  background: #333333;
+}
+#cssmenu ul ul li:last-child > a,
+#cssmenu ul ul li.last-item > a {
+  border-bottom: 0;
+}
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li a:hover {
+  color: #ffffff;
+}
+#cssmenu ul ul li.has-sub > a:after {
+  position: absolute;
+  top: 16px;
+  right: 11px;
+  width: 8px;
+  height: 2px;
+  display: block;
+  background: #dddddd;
+  content: '';
+}
+#cssmenu.align-right ul ul li.has-sub > a:after {
+  right: auto;
+  left: 11px;
+}
+#cssmenu ul ul li.has-sub > a:before {
+  position: absolute;
+  top: 13px;
+  right: 14px;
+  display: block;
+  width: 2px;
+  height: 8px;
+  background: #dddddd;
+  content: '';
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+#cssmenu.align-right ul ul li.has-sub > a:before {
+  right: auto;
+  left: 14px;
+}
+#cssmenu ul ul > li.has-sub:hover > a:before {
+  top: 17px;
+  height: 0;
+}
+
+#main_background {
+  width: 100%;
+  height: 24em;
+}
+
+#top_artists ul, #top_tracks ul, #top_albums ul {
+  display: inline-flex;
+}
+
+#top_artists ul li, #top_tracks ul li, #top_albums ul li {
+  margin-right: 0.5%;
+}
+
+li {list-style: none;}
+
+#top_artists ul li a, #top_tracks ul li a, #top_albums ul li a {
+      color: #333333;
+      text-decoration: none;
+}
+
+#top_artists, #top_tracks, #top_albums {
+    border: 2px solid black;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: #ACACAC;
+    border-radius: 2%;
+}
+a img {
+  width: 10em;
+  height: 10em;
+}
+
+#artists, #artists_image, #tracks, #tracks_image, #albums, #albums_image {
+  margin-top:1%;
+  margin-bottom: 5em;
+}
+
+#header_artists, #header_tracks, #header_albums {
+    font-size: 2em;
+    font-family: monospace;
+}
+
+#artists_title, #tracks_title, #albums_title {
+  float: right;
+  margin-right: 50%;
+  font-family: monospace;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+#artists_image, #tracks_image, #albums_image {
+  background-color: #ACACAC;
+  height: 12%;
+  border: 2px solid black;
+  border-radius: 2%;
+}
+
+#artists_image img, #tracks_image img, #albums_image img {
+  margin-left: 5%;
+  padding: 1%;
+}
+
+.song_data li {
+  display: inline-table;
+  margin-left: 2%;
+}
+
+.songs_list {
+  background-color: rgba(172, 172, 172, 0.5);
+}
+
+#intro_image h1 {
+  font-family: monospace;
+}
+
+#info_artist, #search {
+  position: absolute; 
+  background-color: rgba(0,0,0,0.6);
+  width: 99%;    
+  height: 48.5%;
+}
+#search {
+  text-align: -webkit-center;
+}
+
+#info_artist p {
+  color: white;
+  font-size: 1.2em;
+  margin-top: 7%;
+  line-height: 2em;
+  padding-left: 4%;
+  padding-right: 8%;
+  text-align: justify;
+}
+
+@media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  #artists_image, #tracks_image, #albums_image {
+    height: 26em;
+  }
+  #info_artist, #search {
+    width: 96%;
+    height: 49%;
+  }
+  #play_song button {
+    margin-top: 4%;
+  }
+  #play_song i {
+    font-size: 1.5em;
+  }
+  #info_song_play {
+    margin-top: 2%;
+    margin-bottom: -3%;
+  }
+  audio {
+    margin-top: 4%;
+  }
+  input {
+    margin-top:35%;
+    width: 10em;
+  }
+  #info_artist p {
+    font-size: 1em;
+    font-size: 0.8em;
+    padding: 2.5em;
+  }
+  .songs_list ul {
+    margin-left: -2em;
+  }
+  #artists_image img, #tracks_image img, #albums_image img {
+    margin-left: 12%;
+    margin-top: 12%;
+  }
+  #artists_title, #tracks_title, #albums_title {
+    margin-top: 5%;
+    margin-right: 24%;
+  }
+  #logo {
+    width: 11%;
+  }
+  #cssmenu {
+    width: 100%;
+  }
+  #cssmenu ul {
+    width: 100%;
+    display: none;
+  }
+  #cssmenu.align-center > ul {
+    text-align: left;
+  }
+  #cssmenu ul li {
+    width: 100%;
+    border-top: 1px solid rgba(120, 120, 120, 0.2);
+  }
+  #cssmenu ul ul li,
+  #cssmenu li:hover > ul > li {
+    height: auto;
+  }
+  #cssmenu ul li a,
+  #cssmenu ul ul li a {
+    width: 100%;
+    border-bottom: 0;
+  }
+  #cssmenu > ul > li {
+    float: none;
+  }
+  #cssmenu ul ul li a {
+    padding-left: 25px;
+  }
+  #cssmenu ul ul ul li a {
+    padding-left: 35px;
+  }
+  #cssmenu ul ul li a {
+    color: #dddddd;
+    background: none;
+  }
+  #cssmenu ul ul li:hover > a,
+  #cssmenu ul ul li.active > a {
+    color: #ffffff;
+  }
+  #cssmenu ul ul,
+  #cssmenu ul ul ul,
+  #cssmenu.align-right ul ul {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+  #cssmenu > ul > li.has-sub > a:after,
+  #cssmenu > ul > li.has-sub > a:before,
+  #cssmenu ul ul > li.has-sub > a:after,
+  #cssmenu ul ul > li.has-sub > a:before {
+    display: none;
+  }
+  #cssmenu #menu-button {
+    display: block;
+    padding: 17px;
+    color: #333333;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  #cssmenu #menu-button:after {
+    position: absolute;
+    top: 22px;
+    right: 17px;
+    display: block;
+    height: 4px;
+    width: 20px;
+    border-top: 2px solid #dddddd;
+    border-bottom: 2px solid #dddddd;
+    content: '';
+  }
+  #cssmenu #menu-button:before {
+    position: absolute;
+    top: 16px;
+    right: 17px;
+    display: block;
+    height: 2px;
+    width: 20px;
+    background: #dddddd;
+    content: '';
+  }
+  #cssmenu #menu-button.menu-opened:after {
+    top: 23px;
+    border: 0;
+    height: 2px;
+    width: 15px;
+    background: #ffffff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  #cssmenu #menu-button.menu-opened:before {
+    top: 23px;
+    background: #ffffff;
+    width: 15px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  #cssmenu .submenu-button {
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    top: 0;
+    display: block;
+    border-left: 1px solid rgba(120, 120, 120, 0.2);
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+  }
+  #cssmenu .submenu-button.submenu-opened {
+    background: #262626;
+  }
+  #cssmenu ul ul .submenu-button {
+    height: 34px;
+    width: 34px;
+  }
+  #cssmenu .submenu-button:after {
+    position: absolute;
+    top: 22px;
+    right: 19px;
+    width: 8px;
+    height: 2px;
+    display: block;
+    background: #dddddd;
+    content: '';
+  }
+  #cssmenu ul ul .submenu-button:after {
+    top: 15px;
+    right: 13px;
+  }
+  #cssmenu .submenu-button.submenu-opened:after {
+    background: #ffffff;
+  }
+  #cssmenu .submenu-button:before {
+    position: absolute;
+    top: 19px;
+    right: 22px;
+    display: block;
+    width: 2px;
+    height: 8px;
+    background: #dddddd;
+    content: '';
+  }
+  #cssmenu ul ul .submenu-button:before {
+    top: 12px;
+    right: 16px;
+  }
+  #cssmenu .submenu-button.submenu-opened:before {
+    display: none;
+  }
+}
+
+/******************************************
+
+  Per que la taula alhora de mostrar les 
+  cançons es mostri correctament
+
+******************************************/
+.rwd-table {
+  min-width: 300px;
+  margin: 1em 0;
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+}
+.rwd-table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-color: #46627f;
+}
+.rwd-table th {
+  display: none;
+}
+.rwd-table td {
+  display: block;
+}
+.rwd-table td:first-child {
+  padding-top: .5em;
+}
+.rwd-table td:last-child {
+  padding-bottom: .5em;
+}
+.rwd-table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 6.5em;
+  display: inline-block;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: -1px;
+  color: #34495E;
+}
+.rwd-table th, .rwd-table td {
+  margin: .5em 1em;
+}
+td {
+  text-align: right !important;
+  overflow: hidden;
+}
+td:before {
+  float:left;
+}
+.rwd-table th, .rwd-table td:before {
+  color: black;
+}
+@media (min-width: 480px) {
+  .rwd-table td:before {
+    display: none;
+  }
+  .rwd-table th, .rwd-table td {
+    display: table-cell;
+    padding: .25em .5em;
+  }
+  .rwd-table th:first-child, .rwd-table td:first-child {
+    padding-left: 0;
+  }
+  .rwd-table th:last-child, .rwd-table td:last-child {
+    padding-right: 0;
+  }
+  .rwd-table th, .rwd-table td {
+    padding: 1em !important;
+  }
+}
+.rwd-table th, .rwd-table td {
+  text-align: left; 
+}
